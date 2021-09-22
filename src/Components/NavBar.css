@@ -1,0 +1,18 @@
+.nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: hsl(0, 0%, 100%);
+}
+
+.list-element {
+  display: block;
+  color: rgb(17, 2, 2);
+  text-align: center;
+  padding: 14px 16px;
+}
+
+.list {
+  float: left;
+}

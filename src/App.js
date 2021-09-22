@@ -5,6 +5,7 @@ import About from "./Components/About";
 import Contact from "./Components/Contact";
 import Gallery from "./Components/Gallery";
 import logo from "./TheOMoMalogo.png";
+import Homepage from "./Components/HomePage";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Router>
           <NavBar />
           <Switch>
+            <Route path="../" exact component={Homepage} />
             <Route path="/Gallery" exact component={Gallery} />
             <Route path="/Contact" component={Contact} />
             <Route path="/About" component={About} />
