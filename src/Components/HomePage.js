@@ -1,2 +1,4 @@
-const Homepage = () => {};
-export default Homepage;
+import "./HomePage.css";
+
+const HomePage = () => {};
+export default HomePage;
