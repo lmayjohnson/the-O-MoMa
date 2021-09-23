@@ -1,7 +1,8 @@
-.home {
-  width: 90%;
-  max-width: 40rem;
-  padding: 3rem;
-  margin: 2rem auto;
-  text-align: center;
+
+.Ft-image {
+  position:fixed;
+  bottom:0px;
+  left:0%;
+  width:100%;
+  height:45%
 }

@@ -13,6 +13,10 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img className="App-logo" src={logo} height="100px" alt="logo" />
+        <h2 className="Sub-header">
+          The Online Museum of Modern Arts
+        </h2>
+        <HomePage/>
         <Router>
           <NavBar />
           <Switch>

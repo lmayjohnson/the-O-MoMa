@@ -19,7 +19,18 @@
   font-size: calc(10px + 2vmin);
   color: rgb(7, 6, 6);
 }
+.Sub-header {
+  font-family: "Courier New";
+  font-size: 20px;
+  position: absolute;
+  top: 98px;
+  left: 40px;
+}
 
-.App-link {
-  color: #61dafb;
+.Ft-image {
+  position:fixed;
+  bottom:0px;
+  left:0%;
+  width:100%;
+  height:45%
 }
