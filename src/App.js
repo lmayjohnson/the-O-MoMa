@@ -13,19 +13,18 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img className="App-logo" src={logo} height="100px" alt="logo" />
-        <h2 className="Sub-header">
-          The Online Museum of Modern Arts
-        </h2>
-        <HomePage/>
-        <Router>
-          <NavBar />
-          <Switch>
-            <Route path="../" exact component={Homepage} />
-            <Route path="/Gallery" exact component={Gallery} />
-            <Route path="/Contact" component={Contact} />
-            <Route path="/About" component={About} />
-          </Switch>
-        </Router>
+        <h2 className="Sub-header">The Online Museum of Modern Arts</h2>
+        <main>
+          <Router>
+            <NavBar />
+            <Switch>
+              <Route path="/HomePage" component={HomePage} />
+              <Route path="/Gallery" component={Gallery} />
+              <Route path="/Contact" component={Contact} />
+              <Route path="/About" component={About} />
+            </Switch>
+          </Router>
+        </main>
       </header>
     </div>
   );

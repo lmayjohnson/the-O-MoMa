@@ -6,7 +6,7 @@ const NavBar = () => {
   return (
     <div className="nav">
       <li className="list">
-        <Link className="list-element" to="/">
+        <Link className="list-element" to="/HomePage">
           Home
         </Link>
       </li>
