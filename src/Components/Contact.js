@@ -1,3 +1,4 @@
+import "./Contact.css";
 import React from "react";
 import { useState } from "react";
 const Contact = () => {
@@ -13,8 +14,8 @@ const Contact = () => {
   };
   return (
     <form onSubmit={handleSubmit}>
-      <h2 font-family="Courier New">Feedback or Questions?</h2>
-      <h3 font-family="Courier New"> Contact Us!</h3>
+      <h2 className="HeaderStyle1">Feedback or Questions?</h2>
+      <h3 className="HeaderStyle2"> Contact Us!</h3>
       <p>
         <label>
           Name:
@@ -38,11 +39,11 @@ const Contact = () => {
         </label>
       </p>
       <p>
-        <label>
+        <label className="MessageField">
           Message:
           <input
             type="text"
-            name="age"
+            name="message"
             value={inputs.message || ""}
             onChange={handleChange}
           />
