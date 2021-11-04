@@ -1,59 +1,64 @@
 import "./Contact.css";
 import React from "react";
+import { Form } from "react-bootstrap";
+import { Row } from "react-bootstrap";
+import { Col } from "react-bootstrap";
+import { Button } from "react-bootstrap";
+import { InputGroup } from "react-bootstrap";
 import { useState } from "react";
 
 const Contact = () => {
-  const [inputs, setInputs] = useState({});
-  const handleChange = (event) => {
-    const name = event.target.name;
-    const value = event.target.value;
-    setInputs((values) => ({ ...values, [name]: value }));
-  };
+  const [validated, setValidated] = useState(false);
+
   const handleSubmit = (event) => {
-    event.preventDefault();
-    console.log(inputs);
+    const form = event.currentTarget;
+    if (form.checkValidity() === false) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+
+    setValidated(true);
   };
   return (
-    <div className="div">
-      <form onSubmit={handleSubmit}>
-        <h2 className="HeaderStyle1">Feedback or Questions?</h2>
-        <h3 className="HeaderStyle2"> Contact Us</h3>
-        <p>
-          <label className="FormStyle">
-            Name:
-            <input
-              type="text"
-              name="name"
-              value={inputs.name || ""}
-              onChange={handleChange}
-            />
-          </label>
-        </p>
-        <p>
-          <label className="FormStyle">
-            Email:
-            <input
-              type="text"
-              name="email"
-              value={inputs.email || ""}
-              onChange={handleChange}
-            />
-          </label>
-        </p>
-        <p>
-          <label className="MessageField">
-            Message:
-            <input
-              type="text"
-              name="message"
-              value={inputs.message || ""}
-              onChange={handleChange}
-            />
-          </label>
-        </p>
-        <input type="submit" />
-      </form>
-    </div>
+    <Form noValidate validated={validated} onSubmit={handleSubmit}>
+      <Row className="mb-2">
+        <Form.Group as={Col} md="4" controlId="validationCustom01">
+          <Form.Label className="FormStyle">First name</Form.Label>
+          <Form.Control
+            required
+            type="text"
+            placeholder="First name"
+            defaultValue=""
+          />
+          <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+        </Form.Group>
+        <Form.Group as={Col} md="4" controlId="validationCustom02">
+          <Form.Label className="FormStyle">Last name</Form.Label>
+          <Form.Control
+            required
+            type="text"
+            placeholder="Last name"
+            defaultValue=""
+          />
+          <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+        </Form.Group>
+      </Row>
+      <Form.Group className="mb-3">
+        <Form.Label className="FormStyle">Message</Form.Label>
+        <InputGroup hasValidation>
+          <Form.Control
+            aria-required
+            type="text"
+            placeholder=""
+            defaultValue=""
+          />
+          <Form.Control.Feedback type="invalid">
+            Looks good!
+          </Form.Control.Feedback>
+        </InputGroup>
+      </Form.Group>
+      <Button type="submit">Submit form</Button>
+    </Form>
   );
 };
 export default Contact;
