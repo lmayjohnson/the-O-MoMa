@@ -1,0 +1,15 @@
+.Map {
+  width: 270px;
+  height: 270px;
+  position: relative;
+}
+
+.Cardex {
+  height: 300px;
+  width: 300px;
+  position: relative;
+  border-color: transparent;
+  position: absolute;
+  top: 200px;
+  right: 60px;
+}
