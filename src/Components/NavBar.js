@@ -1,30 +1,25 @@
 import React from "react";
 import "./NavBar.css";
 import { Link } from "react-router-dom";
+import { Nav } from "react-bootstrap";
 
 const NavBar = () => {
   return (
-    <div className="nav">
-      <li className="list">
-        <Link className="list-element" to="/HomePage">
-          Home
-        </Link>
-      </li>
-      <li className="list">
-        <Link className="list-element" to="/Gallery">
-          Gallery
-        </Link>
-      </li>
-      <li className="list">
-        <Link className="list-element" to="/Contact">
-          Contact
-        </Link>
-      </li>
-      <li className="list">
-        <Link className="list-element" to="/About">
-          About
-        </Link>
-      </li>
+    <div className="Nav-bar">
+      <Nav className="justify-content-center" activeKey="/home">
+        <Nav.Item className="Nav-element">
+          <Nav.Link href="/HomePage">Home</Nav.Link>
+        </Nav.Item>
+        <Nav.Item className="Nav-element">
+          <Nav.Link href="/Contact">Contact</Nav.Link>
+        </Nav.Item>
+        <Nav.Item className="Nav-element">
+          <Nav.Link href="/About">About Us</Nav.Link>
+        </Nav.Item>
+        <Nav.Item className="Nav-element">
+          <Nav.Link href="/Gallery">Gallery</Nav.Link>
+        </Nav.Item>
+      </Nav>
     </div>
   );
 };
