@@ -1,0 +1,24 @@
+.Ft-image {
+  position: fixed;
+  bottom: 0px;
+  left: 0%;
+}
+
+.Card-body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+}
+.Card-title {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 30px;
+}
+.Card {
+  margin-left: 30px;
+  margin-right: 30px;
+  width: auto;
+  border-radius: 8px;
+  position: relative;
+  display: block;
+  margin-top: 200px; /* changed */
+  overflow: visible;
+}

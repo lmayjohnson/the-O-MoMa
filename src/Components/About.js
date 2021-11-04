@@ -1,9 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
+import { Card } from "react-bootstrap";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import { Button } from "react-bootstrap";
+import ftimage from "../VincentVanGogh.jpeg";
+import "./About.css";
+
 const About = () => {
+  const history = useHistory();
+  const handleClick = () => history.push("/Contact");
+
   return (
-    <div>
-      <h3>About Page Placeholder</h3>
-    </div>
+    <center>
+      <Card className="Card" style={{ width: "24rem" }}>
+        <Card.Img variant="top" src={ftimage} />
+        <Card.Body>
+          <Card.Title className="Card-title">About Us </Card.Title>
+          <Card.Text className="Card-body">
+            The O Mo Ma originated in St.Louis, Missouri during the rise of a
+            world wide pandemic in December of 2020. It arose amongst Modern
+            Arts museum closures with a birthright to serve as a safe space for
+            continuing the appreciation of the modern arts.
+          </Card.Text>
+          <Button variant="primary" onClick={handleClick}>
+            Contact Us!
+          </Button>
+        </Card.Body>
+      </Card>
+    </center>
   );
 };
 export default About;
