@@ -22,6 +22,10 @@ const Contact = () => {
   };
   return (
     <div className="div">
+      <br />
+      <br />
+      <div className="HeaderStyle1">Questions or Feedback?</div>
+      <br />
       <Form noValidate validated={validated} onSubmit={handleSubmit}>
         <Row className="mb-3">
           <Form.Group as={Col} md="4" controlId="validationCustom01">
@@ -32,7 +36,7 @@ const Contact = () => {
               placeholder="First name"
               defaultValue=""
             />
-            <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+            <Form.Control.Feedback></Form.Control.Feedback>
           </Form.Group>
           <Form.Group as={Col} md="4" controlId="validationCustom02">
             <Form.Label className="FormStyle">Last name</Form.Label>
@@ -42,21 +46,14 @@ const Contact = () => {
               placeholder="Last name"
               defaultValue=""
             />
-            <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+            <Form.Control.Feedback></Form.Control.Feedback>
           </Form.Group>
         </Row>
         <Form.Group className="mb-3">
           <Form.Label className="FormStyle">Message</Form.Label>
           <InputGroup hasValidation>
-            <Form.Control
-              aria-required
-              type="text"
-              placeholder=""
-              defaultValue=""
-            />
-            <Form.Control.Feedback type="invalid">
-              Looks good!
-            </Form.Control.Feedback>
+            <Form.Control required type="text" placeholder="" defaultValue="" />
+            <Form.Control.Feedback type="invalid"></Form.Control.Feedback>
           </InputGroup>
         </Form.Group>
         <Button type="submit">Submit form</Button>
