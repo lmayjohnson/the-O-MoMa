@@ -1,10 +1,11 @@
 import "./HomePage.css";
+import Image from "react-bootstrap/Image";
 import ftimage from "../TakashiMurakami.png";
 
 const HomePage = () => {
   return (
     <div>
-      <img className="Ft-image" src={ftimage} height="100px" alt="logo" />
+      <Image className="Ft-image" src={ftimage} fluid />
     </div>
   );
 };

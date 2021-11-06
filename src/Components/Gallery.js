@@ -1,4 +1,9 @@
 import React from "react";
+import "./Gallery.css";
+import Image from "react-bootstrap/Image";
+import img1 from "../TakashiMurakami.png";
+import img2 from "../FridaKahlo.png";
+import img3 from "../VincentVanGogh.jpeg";
 
 const Gallery = () => {
   let req = new XMLHttpRequest();
@@ -17,9 +22,20 @@ const Gallery = () => {
   req.send();
 
   return (
-    <h3>
-      TO DO: create gallery grids and parse JSON corrrectly, then add unit test!
-    </h3>
+    <div>
+      <h3> TODO: Add grid and link JSON data to corresponding ID in grid.</h3>
+      <div className="row">
+        <div className="column">
+          <Image src={img1} />
+        </div>
+      </div>
+      <div className="column">
+        <Image src={img3} />
+      </div>
+      <div className="column">
+        <Image src={img2} />
+      </div>
+    </div>
   );
 };
 export default Gallery;

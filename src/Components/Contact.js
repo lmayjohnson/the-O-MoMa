@@ -29,7 +29,7 @@ const Contact = () => {
       <Form noValidate validated={validated} onSubmit={handleSubmit}>
         <Row className="mb-3">
           <Form.Group as={Col} md="4" controlId="validationCustom01">
-            <Form.Label className="FormStyle">First name</Form.Label>
+            <Form.Label className="FormStyle">First Name</Form.Label>
             <Form.Control
               required
               type="text"
@@ -39,7 +39,7 @@ const Contact = () => {
             <Form.Control.Feedback></Form.Control.Feedback>
           </Form.Group>
           <Form.Group as={Col} md="4" controlId="validationCustom02">
-            <Form.Label className="FormStyle">Last name</Form.Label>
+            <Form.Label className="FormStyle">Last Name</Form.Label>
             <Form.Control
               required
               type="text"
