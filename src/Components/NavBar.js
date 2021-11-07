@@ -18,7 +18,7 @@ const NavBar = () => {
         </Nav.Item>
         <Nav.Item>
           <Nav.Link className="Nav-element" href="/About">
-            About Us
+            About
           </Nav.Link>
         </Nav.Item>
         <Nav.Item>

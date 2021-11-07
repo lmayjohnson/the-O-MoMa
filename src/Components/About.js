@@ -10,10 +10,13 @@ const About = () => {
 
   return (
     <center>
-      <Card className="Card" style={{ width: "24rem" }}>
+      <br />
+      <br />
+      <Card className="Card" style={{ width: "30rem" }}>
+        <Card.Title className="Card-title">About Us </Card.Title>
+
         <Card.Img variant="top" src={ftimage} />
         <Card.Body>
-          <Card.Title className="Card-title">About Us </Card.Title>
           <Card.Text className="Card-body">
             The O Mo Ma originated in St.Louis, Missouri during the rise of a
             world wide pandemic in December of 2020. It arose amongst Modern
