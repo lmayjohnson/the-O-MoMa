@@ -71,6 +71,7 @@ body {
 
 .container-style {
   margin-top: 200px; /* changed */
+  z-index: 2; /*Add this*/
 }
 
 .img-sizing {

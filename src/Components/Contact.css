@@ -18,6 +18,7 @@
 .div {
   top: 500px;
   left: 0;
+  z-index: 2; /*Add this*/
 }
 
 .submit-button {
