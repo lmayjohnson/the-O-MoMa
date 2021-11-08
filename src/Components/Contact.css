@@ -24,3 +24,8 @@
   width: 10px;
   font-family: Georgia, "Times New Roman", Times, serif;
 }
+.caption {
+  font-size: 12px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: rgb(95, 95, 95);
+}

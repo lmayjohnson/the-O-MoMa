@@ -24,39 +24,57 @@ const Contact = () => {
     <div className="div">
       <br />
       <br />
+      <br /> <br />
       <div className="HeaderStyle1">Questions or Feedback?</div>
-      <br />
       <Form noValidate validated={validated} onSubmit={handleSubmit}>
-        <Row className="mb-3">
-          <Form.Group as={Col} md="4" controlId="validationCustom01">
-            <Form.Label className="FormStyle">First Name</Form.Label>
-            <Form.Control
-              required
-              type="text"
-              placeholder="First name"
-              defaultValue=""
-            />
-            <Form.Control.Feedback></Form.Control.Feedback>
+        <Row>
+          <Form.Group className="mb-2">
+            <Form.Group as={Col} controlId="validationCustom01">
+              <Form.Label className="FormStyle">Name</Form.Label>
+              <Form.Control
+                required
+                type="text"
+                placeholder="Pablo Ruiz Picasso"
+                defaultValue=""
+              />
+              <Form.Control.Feedback></Form.Control.Feedback>
+            </Form.Group>
           </Form.Group>
-          <Form.Group as={Col} md="4" controlId="validationCustom02">
-            <Form.Label className="FormStyle">Last Name</Form.Label>
-            <Form.Control
-              required
-              type="text"
-              placeholder="Last name"
-              defaultValue=""
-            />
-            <Form.Control.Feedback></Form.Control.Feedback>
+        </Row>
+        <Row>
+          <Form.Group className="mb-2">
+            <Form.Group as={Col} controlId="validationCustom02">
+              <Form.Label className="FormStyle">Email</Form.Label>
+              <Form.Control
+                required
+                type="text"
+                placeholder="pablopicasso1881@gmail.com"
+                defaultValue=""
+              />
+              <Form.Text>
+                <p className="caption">
+                  We'll never share your email with anyone else.
+                </p>
+              </Form.Text>
+              <Form.Control.Feedback></Form.Control.Feedback>
+            </Form.Group>
           </Form.Group>
         </Row>
         <Form.Group className="mb-3">
           <Form.Label className="FormStyle">Message</Form.Label>
           <InputGroup hasValidation>
-            <Form.Control required type="text" placeholder="" defaultValue="" />
+            <Form.Control
+              as="textarea"
+              rows={3}
+              required
+              type="text"
+              placeholder=""
+              defaultValue=""
+            />
             <Form.Control.Feedback type="invalid"></Form.Control.Feedback>
           </InputGroup>
         </Form.Group>
-        <Button type="submit">Submit form</Button>
+        <Button type="submit">Submit</Button>
       </Form>
       <Map />
     </div>
