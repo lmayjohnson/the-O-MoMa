@@ -22,6 +22,9 @@ const Gallery = () => {
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  const [data, setData] = useState("");
+
   var resultAsObj;
   req.onreadystatechange = () => {
     if (req.readyState === XMLHttpRequest.DONE) {
@@ -31,6 +34,7 @@ const Gallery = () => {
         " ++++ ARTIST NAME IS:",
         resultAsObj.artist_biographies[0].name
       );
+      setData(resultAsObj.artist_biographies[0].name);
     }
   };
 
@@ -47,7 +51,7 @@ const Gallery = () => {
       <Row>
         <Modal show={show} onHide={handleClose}>
           <Modal.Header closeButton>
-            <Modal.Title>Painting Name {}</Modal.Title>
+            <Modal.Title>Painting Name {data}</Modal.Title>
           </Modal.Header>
           <Modal.Body>Bio: {}</Modal.Body>
           <Modal.Footer></Modal.Footer>
