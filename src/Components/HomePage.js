@@ -5,6 +5,8 @@ import selfie from "../TMselfie.png";
 import Modal from "react-bootstrap/Modal";
 import { useState } from "react";
 import { Card } from "react-bootstrap";
+import { Container, Row, Col } from "react-grid-system";
+
 
 const HomePage = () => {
   let req = new XMLHttpRequest();
@@ -36,6 +38,9 @@ const HomePage = () => {
   req.send();
 
   return (
+    <Container className="container-style">
+    <Row>
+      <Col sm={4}>
     <div>
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
@@ -56,7 +61,10 @@ const HomePage = () => {
         src={ftimage}
         onClick={handleShow}
       />
-    </div>
+          </div>
+        </Col>
+      </Row>
+      </Container>
   );
 };
 export default HomePage;

@@ -22,3 +22,7 @@
   height: 144px;
   width: 144px;
 }
+.container-style {
+  margin-top: 200px; /* changed */
+  z-index: 3; /*Add this*/
+}
