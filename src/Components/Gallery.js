@@ -10,116 +10,66 @@ import img6 from "../imgs/untitled.png";
 import img7 from "../imgs/947-5.png";
 import img8 from "../imgs/diego on my mind.png";
 import img9 from "../imgs/the virgins.png";
-import Modal from "react-bootstrap/Modal";
-import { useState } from "react";
 
 import { Container, Row, Col } from "react-grid-system";
 
 const Gallery = () => {
-  let req = new XMLHttpRequest();
-
-  const [show, setShow] = useState(false);
-
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-
-  const [data, setData] = useState("");
-
-  var resultAsObj;
-  req.onreadystatechange = () => {
-    if (req.readyState === XMLHttpRequest.DONE) {
-      resultAsObj = JSON.parse(req.response);
-      console.log({ resultAsObj });
-      console.log(
-        " ++++ ARTIST NAME IS:",
-        resultAsObj.artist_biographies[0].name
-      );
-      setData(resultAsObj.artist_biographies[0].name);
-    }
-  };
-
-  req.open("GET", "https://api.jsonbin.io/b/6185fce6c4eaa14d5846b96b", true);
-  req.setRequestHeader(
-    "x-master-key",
-    "$2b$10$s7H4sIMBHHg90w2OHbw.WOabecMFwItIyyY9Oi3HxZV5ANKnwcGo6"
-  );
-
-  req.send();
-
   return (
     <Container className="container-style">
       <Row>
-        <Modal show={show} onHide={handleClose}>
-          <Modal.Header closeButton>
-            <Modal.Title>Painting Name {data}</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>Bio: {}</Modal.Body>
-          <Modal.Footer></Modal.Footer>
-        </Modal>
         <Col sm={4}>
-          <Card.Img
-            classname="img-sizing"
-            variant="top"
-            src={img1}
-            onClick={handleShow}
-          />
+          <Card.Img variant="top" src={img1} />
+          <div className="p-cap">Pop Show</div>
+          <p className="artist-cap">Keith Haring</p>
         </Col>
         <Col sm={4}>
-          <Card.Img
-            classname="img-sizing"
-            variant="top"
-            src={img2}
-            onClick={handleShow}
-          />
+          <Card.Img variant="top" src={img2} />
+          <div className="p-cap">Self Portrait</div>
+          <p className="artist-cap">Vincent Van Gogh</p>
         </Col>
         <Col sm={4}>
-          <Card.Img
-            classname="img-sizing"
-            variant="top"
-            src={img3}
-            onClick={handleShow}
-          />
+          <Card.Img variant="top" src={img3} />
+          <div className="p-cap">At the Sursock Museum</div>
+          <p className="artist-cap">Pablo Picasso</p>
         </Col>
       </Row>
-      <br /> <br />
+      <br />
       <Row>
         <Col sm={4}>
-          <Card.Img
-            classname="img-sizing"
-            variant="top"
-            src={img4}
-            onClick={handleShow}
-          />
+          <Card.Img variant="top" src={img4} />
+          <div className="p-cap">The Water Lily Pond</div>
+          <p className="artist-cap">Claude Monet</p>
         </Col>
         <Col sm={4}>
-          <Card.Img
-            classname="img-sizing"
-            variant="top"
-            src={img5}
-            onClick={handleShow}
-          />
+          <Card.Img variant="top" src={img5} />
+          <div className="p-cap">Noah's Ark</div>
+          <p className="artist-cap">Takashi Murakami</p>
         </Col>
         <Col sm={4}>
-          <Card.Img
-            classname="img-sizing"
-            variant="top"
-            src={img6}
-            onClick={handleShow}
-          />
+          <Card.Img variant="top" src={img6} />
+          <div className="p-cap">Untitled</div>
+          <p className="artist-cap">Jean-Michael Basquiat</p>
         </Col>
       </Row>
-      <br /> <br />
+      <br />
       <Row>
         <Col sm={4}>
-          <Card.Img variant="top" src={img7} onClick={handleShow} />
+          <Card.Img variant="top" src={img7} />
+          <div className="p-cap">947-5</div>
+          <p className="artist-cap">Gerard Richter</p>
         </Col>
         <Col sm={4}>
-          <Card.Img variant="top" src={img8} onClick={handleShow} />
+          <Card.Img variant="top" src={img8} />
+          <div className="p-cap">Diego On My Mind</div>
+          <p className="artist-cap">Frida Kahlo</p>
         </Col>
         <Col sm={4}>
-          <Card.Img variant="top" src={img9} onClick={handleShow} />
+          <Card.Img variant="top" src={img9} />
+          <div className="p-cap">The Virgins</div>
+          <p className="artist-cap">Gustav Klimt</p>
         </Col>
       </Row>
+      <br />
     </Container>
   );
 };

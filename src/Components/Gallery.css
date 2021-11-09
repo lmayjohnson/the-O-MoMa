@@ -78,3 +78,12 @@ body {
   width: 96px;
   height: 65px;
 }
+.artist-cap {
+  font-size: 9px;
+  color: rgb(48, 48, 48);
+  font-style: italic;
+}
+.p-cap {
+  font-size: 15px;
+  font-family: "Courier New", Courier, monospace;
+}
