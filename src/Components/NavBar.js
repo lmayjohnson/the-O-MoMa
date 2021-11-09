@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./NavBar.css";
 import { Nav } from "react-bootstrap";
 
 const NavBar = () => {
+
+
   return (
-    <div className="Nav-bar">
+  
+    <div className="nav">
       <Nav className="justify-content-center" activeKey="/home">
         <Nav.Item>
           <Nav.Link className="Nav-element" href="/HomePage">

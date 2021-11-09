@@ -4,13 +4,15 @@
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 
-.Nav-bar {
+.nav {
   position: fixed;
   color: black;
   width: 100%;
   top: 120px;
   left: 0;
+  transition-timing-function: ease-in;  
+  transition: 0.5s;
   padding-left: 60px;
   padding-right: 60px;
-  z-index: 1; /*Add this*/
+  z-index: 1;
 }
