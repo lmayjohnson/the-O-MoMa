@@ -1,11 +1,7 @@
 import "./Contact.css";
 import React from "react";
 import Map from "./Map";
-import { Form } from "react-bootstrap";
-import { Row } from "react-bootstrap";
-import { Col } from "react-bootstrap";
-import { Button } from "react-bootstrap";
-import { InputGroup } from "react-bootstrap";
+import { Form, Row, Col, Button, InputGroup } from "react-bootstrap";
 import { useState } from "react";
 
 const Contact = () => {

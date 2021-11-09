@@ -1,6 +1,5 @@
-import { Card } from "react-bootstrap";
+import { Card, Button } from "react-bootstrap";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
-import { Button } from "react-bootstrap";
 import ftimage from "../VincentVanGogh.jpeg";
 import "./About.css";
 

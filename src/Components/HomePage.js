@@ -4,8 +4,7 @@ import selfie from "../TMselfie.png";
 
 import Modal from "react-bootstrap/Modal";
 import { useState } from "react";
-import { Card } from "react-bootstrap";
-import { Container, Row, Col } from "react-grid-system";
+import { Card, Container, Row, Col } from "react-bootstrap";
 
 
 const HomePage = () => {
