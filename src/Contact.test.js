@@ -1,13 +1,13 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import {render, screen} from '@testing-library/react'
 import Contact from './Components/Contact';
-    describe('Contact component tests', ()=> {
-        const wrapper = shallow(<Contact />);
-
-        it('should have input for name and email', ()=> {
-            //Name and email input field should be present
-            expect(wrapper.find('input#name')).toEqual("");
-            expect(wrapper.find('input#email')).toEqual("");
-        });
-
+test('Contact component tests', () => {
+        render(<Contact />);
+        //Name and message input field should be present
+        const nameElement = screen.getByText("name", {exact:false});
+    expect(nameElement).toBeInTheDocument();
+    
+    const messageElement = screen.getByText("message", {exact:false});
+    expect(messageElement).toBeInTheDocument();
     });
+

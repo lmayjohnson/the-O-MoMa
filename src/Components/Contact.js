@@ -29,12 +29,11 @@ const Contact = () => {
       <Form noValidate validated={validated} onSubmit={handleSubmit}>
         <Row>
           <Form.Group className="mb-2">
-            <Form.Group as={Col} controlId="validationCustom01">
+            <Form.Group as={Col} controlId="name">
               <Form.Label className="FormStyle">Name</Form.Label>
               <Form.Control
                 required
                 type="text"
-                id="name"
                 placeholder="Pablo Ruiz Picasso"
                 defaultValue=""
               />
@@ -44,12 +43,11 @@ const Contact = () => {
         </Row>
         <Row>
           <Form.Group className="mb-2">
-            <Form.Group as={Col} controlId="validationCustom02">
+            <Form.Group as={Col} controlId="email">
               <Form.Label className="FormStyle">Email</Form.Label>
               <Form.Control
                 required
                 type="text"
-                id="email"
                 placeholder="pablopicasso1881@gmail.com"
                 defaultValue=""
               />
