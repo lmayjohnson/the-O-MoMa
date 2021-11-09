@@ -34,6 +34,7 @@ const Contact = () => {
               <Form.Control
                 required
                 type="text"
+                id="name"
                 placeholder="Pablo Ruiz Picasso"
                 defaultValue=""
               />
@@ -48,6 +49,7 @@ const Contact = () => {
               <Form.Control
                 required
                 type="text"
+                id="email"
                 placeholder="pablopicasso1881@gmail.com"
                 defaultValue=""
               />
