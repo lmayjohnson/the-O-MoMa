@@ -1,5 +1,6 @@
 import "./HomePage.css";
 import ftimage from "../featured.png";
+import ftText from "../imgs/featured.png"
 import selfie from "../TMselfie.png";
 
 import Modal from "react-bootstrap/Modal";
@@ -53,7 +54,9 @@ const HomePage = () => {
           <div className="body-style">{data.bio}</div>
         </Modal.Body>
         <Modal.Footer></Modal.Footer>
-      </Modal>
+            </Modal>
+      <img className="ftText" src={ftText} height="100px" alt="logo" />
+
       <Card.Img
         className="Ft-image"
         variant="top"
