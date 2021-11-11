@@ -56,13 +56,13 @@ const HomePage = () => {
         <Modal.Footer></Modal.Footer>
             </Modal>
       <img className="ftText" src={ftText} height="100px" alt="logo" />
-
+    <div>
       <Card.Img
         className="Ft-image"
         variant="top"
         src={ftimage}
         onClick={handleShow}
-      />
+      /></div>
           </div>
         </Col>
       </Row>
